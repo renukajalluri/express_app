@@ -28,6 +28,7 @@ app.post("/bmicalc",(req,res)=>{
     var bmi = w1/(h1*h1);
     res.send("the calculation is " + bmi);
 });
-app.listen(3000,()=>{
+var port_number = server.listen(process.env.PORT || 3000);
+app.listen(port_number,()=>{
     console.log("listening on port 3000");    
 })
